@@ -68,7 +68,7 @@
             'Meningkatkan kualitas tata kelola program studi menuju standar unggul.',
             'Menjalin kerja sama produktif dan berkelanjutan di tingkat daerah, nasional, dan internasional.'
           ],
-          'imageDefault' => 'model_ners_1.jpg',
+          'imageDefault' => 'modelbdn3.png',
           'imageAlt' => 'Mahasiswi Kebidanan',
         ])
 
@@ -117,7 +117,7 @@
             'Mendorong penelitian dan pengabdian kepada masyarakat di bidang kebidanan secara berkelanjutan.',
             'Menguatkan tata kelola program studi dan jejaring kerja sama untuk meningkatkan daya saing lulusan.'
           ],
-          'imageDefault' => 'model_ners_2.jpg',
+          'imageDefault' => 'modelbdn4.png',
           'imageAlt' => 'Mahasiswi Kebidanan',
         ])
 

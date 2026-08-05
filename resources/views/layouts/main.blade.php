@@ -6,26 +6,33 @@
     <title>@yield('title', 'Universitas Fort De Kock')</title>
     @include('layouts.partials.site-icons')
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    @if (file_exists(public_path('build/manifest.json')))
-        @vite(['resources/css/inspired-campus.css', 'resources/js/app.js'])
-    @else
-        {{-- Vite manifest not found; use compiled assets if present --}}
-        @if (file_exists(public_path('css/inspired-campus.css')))
-            <link rel="stylesheet" href="{{ asset('css/inspired-campus.css') }}">
-        @endif
-        @if (file_exists(public_path('js/app.js')))
-            <script src="{{ asset('js/app.js') }}" defer></script>
-        @endif
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+@if (file_exists(public_path('build/manifest.json')))
+    @vite([
+        'resources/css/inspired-campus.css',
+        'resources/js/app.js'
+    ])
+@else
+    {{-- Fallback jika Vite build belum tersedia --}}
+    @if (file_exists(public_path('css/inspired-campus.css')))
+        <link rel="stylesheet" href="{{ asset('css/inspired-campus.css') }}">
     @endif
-    <link rel="stylesheet" href="{{ asset('css/inspired-campus.css') }}">
-    @stack('head')
+
+    @if (file_exists(public_path('js/app.js')))
+        <script src="{{ asset('js/app.js') }}" defer></script>
+    @endif
+@endif
+
+@stack('head')
 
     <style>
         .footer-overlay { background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)); }

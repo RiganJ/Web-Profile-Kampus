@@ -302,7 +302,7 @@
     <div class="lg:w-5/12 relative hidden lg:block group mt-6">
       <div class="relative overflow-hidden rounded-2xl min-h-[520px] pt-16 pb-20">
         <img
-          src="{{ $prodiProfile?->contentImageUrl('tujuan', 'model_ners_1.jpg') ?? asset('images/model_ners_1.jpg') }}"
+          src="{{ $prodiProfile?->contentImageUrl('tujuan', 'modelbdn3.png') ?? asset('images/model_ners_1.jpg') }}"
           alt="Mahasiswi Kebidanan"
           class="w-full max-w-xl scale-125 drop-shadow-2xl"
         />
@@ -329,7 +329,7 @@
     'Mendorong penelitian dan pengabdian masyarakat untuk meningkatkan mutu pelayanan kebidanan.',
     'Memperkuat jejaring dan tata kelola program profesi untuk menghasilkan lulusan yang berdaya saing.'
   ],
-  'imageDefault' => 'model_ners_2.jpg',
+  'imageDefault' => 'modelbdn5.png',
   'imageAlt' => 'Mahasiswi Profesi Bidan',
 ])
 
