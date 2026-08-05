@@ -30,7 +30,7 @@
 
     <!-- Custom CSS -->
     @if (file_exists(public_path('build/manifest.json')))
-        @vite(['resources/css/prodi.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/css/prodi.css', 'resources/js/app.js'])
     @else
         {{-- Vite manifest not found; use compiled assets if present --}}
         @if (file_exists(public_path('css/prodi.css')))
@@ -40,9 +40,6 @@
             <script src="{{ asset('js/app.js') }}" defer></script>
         @endif
     @endif
-    <link rel="stylesheet" href="{{ asset('css/prodi.css') }}">
-
-
     <style>
 
 
@@ -109,6 +106,8 @@
     -webkit-backdrop-filter: blur(10px); /* support Safari */
 }
 </style>
+</head>
+<body>
 @include('layouts.partials.topbar')
 <!-- ======================= CONTENT ======================= -->
 <main class="overflow-visible">

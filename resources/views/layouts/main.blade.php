@@ -18,6 +18,7 @@
 
 @if (file_exists(public_path('build/manifest.json')))
     @vite([
+        'resources/css/app.css',
         'resources/css/inspired-campus.css',
         'resources/js/app.js'
     ])

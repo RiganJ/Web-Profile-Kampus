@@ -15,7 +15,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     @if (file_exists(public_path('build/manifest.json')))
-        @vite(['resources/css/bisdig.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/css/bisdig.css', 'resources/js/app.js'])
     @else
         {{-- Vite manifest not found; use compiled assets if present --}}
         @if (file_exists(public_path('css/bisdig.css')))
@@ -25,9 +25,6 @@
             <script src="{{ asset('js/app.js') }}" defer></script>
         @endif
     @endif
-    <link rel="stylesheet" href="{{ asset('css/bisdig.css') }}">
-
-
     <style>
         .footer-overlay { background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)); }
         .footer-link { transition: all .3s ease; }
